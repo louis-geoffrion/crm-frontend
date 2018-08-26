@@ -26,8 +26,8 @@ export default class Add extends Component {
 	handleSubmit(event) {
 		var details = {
 				firstname	: this.state.firstname,
-				lastname	: this.state.lastname,
-				company		: this.state.company ,
+				lastname	: this.state.lastname	,
+				company		: this.state.company 	,
 				phone			: this.state.phone		,
 				email 		: this.state.email		,
 				agent			: this.state.agent
