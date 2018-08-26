@@ -3,6 +3,8 @@ import {Panel,Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import Notes from './Notes.js';
 import './App.css';
 
+// A page for displaying all of a clients information and notes
+// Uses notes component
 export default class Profile extends Component {
 
 	constructor(props) {

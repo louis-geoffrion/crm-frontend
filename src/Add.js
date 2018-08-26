@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { FormGroup, FormControl, ControlLabel, Button, Panel} from 'react-bootstrap';
 import './App.css';
 
+// Collect a new client's information and send to mongo database
 export default class Add extends Component {
 
 	constructor(props) {

@@ -3,6 +3,7 @@ import Client from './Client.js';
 import {Table} from 'react-bootstrap';
 import "./App.css";
 
+// List all clients in database
 export default class ClientList extends Component {
 
 	constructor (props) 	{

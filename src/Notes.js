@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Well} from 'react-bootstrap';
 import AddNote from './AddNote.js';
 
+// Display all notes for a particular client on their profile page
+// Used in profile compononent
 export default class Notes extends Component {
 
 	constructor (props) {

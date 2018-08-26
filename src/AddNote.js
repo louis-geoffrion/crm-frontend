@@ -1,7 +1,7 @@
-// Designed to Add Notes for a given client
 import React, { Component } from 'react';
 import {FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap';
 
+// Designed to Add Notes for a given client to the database
 export	default	class AddNote extends Component {
 
 	constructor (props) {

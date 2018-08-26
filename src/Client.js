@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Table} from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 
+// A visual container for a clients information
+// Used by client list component
 export default class Client extends Component {
 
 	constructor(props) {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 
-
+// Code for navigation bar
 export default class Navigation extends React.Component {
 
 	render() {
