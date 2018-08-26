@@ -3,6 +3,7 @@ import {Table} from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 
 export default class Client extends Component {
+
 	constructor(props) {
 		super(props)
 			this.state = {
@@ -15,6 +16,8 @@ export default class Client extends Component {
 				id				: "" 
 			}
 		}
+
+
 	componentDidMount() {
 		// Obtain Client Id
 		fetch("http://192.168.1.84:8000/clients/"+ this.props.id)
@@ -34,6 +37,8 @@ export default class Client extends Component {
 				console.log(this.state.id);
 		});
 	};
+
+
 	render() {
 		return (
 				<tbody>

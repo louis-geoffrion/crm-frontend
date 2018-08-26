@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap';
 
 export	default	class AddNote extends Component {
+
 	constructor (props) {
 		super(props);
 		this.state = {
@@ -13,18 +14,21 @@ export	default	class AddNote extends Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
+
 	handleChange(event) {
 		this.setState ({
 			note: event.target.value
 		});
 	}
 
+	
 	handleSubmit (event) {
 		var details = {
 		id : this.state.id ,
 		note: this.state.note 
 	};
 	
+	// Encode Note and send to database
 	var formBody = [];
 	for (var property in details) {
 			var encodedKey = encodeURIComponent(property);
@@ -42,20 +46,22 @@ export	default	class AddNote extends Component {
 	})
 		alert('Note Added');
 	}
-		render () {
-			return(
-					<form onSubmit={this.handleSubmit}>
-						<FormControl
-						componentClass="textarea" rows={4}
-						bsSize = "lg"
-							type = "text"
-							nanme = "note"
-							value = {this.state.note}
-							placeholder = "note"
-							onChange = {this.handleChange}
-							/>
-							<Button type="submit" > Add </Button> 
-					</form>
-			)
-		}
+
+	
+	render () {
+		return(
+				<form onSubmit={this.handleSubmit}>
+					<FormControl
+					componentClass="textarea" rows={4}
+					bsSize = "lg"
+						type = "text"
+						nanme = "note"
+						value = {this.state.note}
+						placeholder = "note"
+						onChange = {this.handleChange}
+						/>
+						<Button type="submit" > Add </Button> 
+				</form>
+		)
+	}
 }

@@ -2,13 +2,17 @@ import React, {Component} from 'react';
 import Client from './Client.js';
 import {Table} from 'react-bootstrap';
 import "./App.css";
+
 export default class ClientList extends Component {
+
 	constructor (props) 	{
 		super(props)
 			this.state = {
 				client_list: [] 
 			}
 	}
+
+	
 	componentDidMount() {
 		fetch("http://192.168.1.84:8000/all")
 			.then(response => response.json())
@@ -18,8 +22,10 @@ export default class ClientList extends Component {
 						client_list: JSON.parse(JSON.stringify(data))	
 							})
 					}
-					)
+				)
 	};
+	
+	
 	render(	) {
 		return (
 			<Table striped bordered condensed hover>
@@ -39,6 +45,5 @@ export default class ClientList extends Component {
 				)}
 			</Table>
 		); 
-		
 	};
 }

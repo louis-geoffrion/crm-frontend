@@ -4,6 +4,7 @@ import Notes from './Notes.js';
 import './App.css';
 
 export default class Profile extends Component {
+
 	constructor(props) {
 		super(props)
 			this.state = {
@@ -16,6 +17,8 @@ export default class Profile extends Component {
 				id				: this.props.match.params.id 
 		}
 	}
+
+
 	componentDidMount(){
 		fetch("http://192.168.1.84:8000/clients/"+ this.state.id)
 			.then(response => response.json())
@@ -28,6 +31,8 @@ export default class Profile extends Component {
 		
 		})
 	};
+
+
 	render() {
 		return (
 				<Panel bsClass='Profile-Panel' >

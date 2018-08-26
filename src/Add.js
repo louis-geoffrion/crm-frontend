@@ -17,12 +17,15 @@ export default class Add extends Component {
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
+	
 	handleChange(event) {
 		const target = event.target;
 		const name = target.name
 		this.setState({
 			[name]:event.target.value });
 	}
+
+
 	handleSubmit(event) {
 		var details = {
 				firstname	: this.state.firstname,
@@ -32,6 +35,7 @@ export default class Add extends Component {
 				email 		: this.state.email		,
 				agent			: this.state.agent
 		};
+
 		// Encode a Post response with x-www-form-urlencoded
 		var formBody = [];
 		for (var property in details) {
@@ -53,6 +57,7 @@ export default class Add extends Component {
 		event.preventDefault();
 	}
 	
+
 	render() {
 		return(
 				<Panel bsStyle="add-panel" bsClass='Profile-Panel'>
@@ -111,7 +116,6 @@ export default class Add extends Component {
 								<Button type="submit"> Submit</Button>
 						</FormGroup>
 					</form>
-
 				</Panel.Body>
 			</Panel>
 		);
