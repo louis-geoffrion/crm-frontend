@@ -11,7 +11,6 @@ export default class ClientList extends Component {
 				client_list: [] 
 			}
 	}
-
 	
 	componentDidMount() {
 		fetch("http://192.168.1.84:8000/all")
@@ -24,7 +23,6 @@ export default class ClientList extends Component {
 					}
 				)
 	};
-	
 	
 	render(	) {
 		return (

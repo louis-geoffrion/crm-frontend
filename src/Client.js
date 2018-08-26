@@ -17,7 +17,6 @@ export default class Client extends Component {
 			}
 		}
 
-
 	componentDidMount() {
 		// Obtain Client Id
 		fetch("http://192.168.1.84:8000/clients/"+ this.props.id)
@@ -37,7 +36,6 @@ export default class Client extends Component {
 				console.log(this.state.id);
 		});
 	};
-
 
 	render() {
 		return (

@@ -18,20 +18,22 @@ export default class Profile extends Component {
 		}
 	}
 
-
 	componentDidMount(){
 		fetch("http://192.168.1.84:8000/clients/"+ this.state.id)
 			.then(response => response.json())
 			.then(data => {
 				this.setState({
-					firstname	: data.firstname, lastname	: data.lastname	, id				:	data._id			, phone			: data.phone		, email			: data.email		,
+					firstname	: data.firstname, 
+					lastname	: data.lastname	, 
+					id				:	data._id			, 
+					phone			: data.phone		, 
+					email			: data.email		,
 					company 	: data.company	,	
 					agent 		: data.agent		
 				})
 		
 		})
 	};
-
 
 	render() {
 		return (
@@ -78,7 +80,6 @@ export default class Profile extends Component {
 						</Row>
 					</Grid>
 				</Panel>
-
 		);
 	}
 }

@@ -14,14 +14,12 @@ export	default	class AddNote extends Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-
 	handleChange(event) {
 		this.setState ({
 			note: event.target.value
 		});
 	}
 
-	
 	handleSubmit (event) {
 		var details = {
 		id : this.state.id ,
@@ -47,7 +45,6 @@ export	default	class AddNote extends Component {
 		alert('Note Added');
 	}
 
-	
 	render () {
 		return(
 				<form onSubmit={this.handleSubmit}>
