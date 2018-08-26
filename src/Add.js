@@ -3,6 +3,7 @@ import { FormGroup, FormControl, ControlLabel, Button, Panel} from 'react-bootst
 import './App.css';
 
 export default class Add extends Component {
+
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -25,7 +26,6 @@ export default class Add extends Component {
 			[name]:event.target.value });
 	}
 
-
 	handleSubmit(event) {
 		var details = {
 				firstname	: this.state.firstname,
@@ -35,7 +35,6 @@ export default class Add extends Component {
 				email 		: this.state.email		,
 				agent			: this.state.agent
 		};
-
 		// Encode a Post response with x-www-form-urlencoded
 		var formBody = [];
 		for (var property in details) {
@@ -44,7 +43,6 @@ export default class Add extends Component {
 			formBody.push(encodedKey + "=" + encodedValue);
 		}
 		formBody = formBody.join("&");
-
 		fetch('http://192.168.1.84:8000/clients', {
 			method: 'POST',
 			headers: {
@@ -52,12 +50,10 @@ export default class Add extends Component {
 			},
 			body: formBody
 		})
-
 		alert('A name was submitted: ' + this.state.firstname + this.state.lastname + this.state.company + this.state.phone + this.state.email + this.state.agent);
 		event.preventDefault();
 	}
 	
-
 	render() {
 		return(
 				<Panel bsStyle="add-panel" bsClass='Profile-Panel'>

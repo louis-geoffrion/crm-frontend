@@ -11,7 +11,6 @@ export default class Notes extends Component {
 				id : this.props.id
 			}
 	}
-
 	
 	componentDidMount() {
 		// Encode a Post response with x-www-form-urlencoded
@@ -36,11 +35,9 @@ export default class Notes extends Component {
 			})
 	}	
 
-
 	update() {
 		console.log("updated!");
 	}
-
 
 	render() {
 		console.log(Object.keys(this.state.notes));
