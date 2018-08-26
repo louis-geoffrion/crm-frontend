@@ -12,12 +12,13 @@ export	default	class AddNote extends Component {
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
-	handleChange(event) {
 
+	handleChange(event) {
 		this.setState ({
 			note: event.target.value
 		});
 	}
+
 	handleSubmit (event) {
 		var details = {
 		id : this.state.id ,
